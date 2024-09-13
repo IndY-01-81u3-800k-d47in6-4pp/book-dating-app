@@ -2,7 +2,7 @@
 | Chelsea Mandel<br>Documentation | Sebastain Arechaga<br>Developer |
 |----------|----------|
 | ![Chelsea Mandel](https://github.com/user-attachments/assets/a4a8cc2a-529f-46bf-a963-86d8e7ff04cd) | ![Sebastian Arechaga](https://github.com/user-attachments/assets/0f6fd2fc-afe6-4482-857c-3b1878d53e3c) |
-| <p align="center">Obie Ezeobi<br>Developer</p> | <p align="center">Keaton Moneymaker<br>Developer</p> |
+| <p align="center">**Obie Ezeobi**<br>**Developer**</p> | <p align="center">**Keaton Moneymaker**<br>**Developer**</p> |
 | ![Obie Ezeobi](https://github.com/user-attachments/assets/ef3aadfb-7b38-47b5-ab8b-0e009655409f) | ![Keaton Moneymaker](https://github.com/user-attachments/assets/0e2931c3-7368-40cb-a0fe-6e449b1eec45) |
 
 ## Team Members
