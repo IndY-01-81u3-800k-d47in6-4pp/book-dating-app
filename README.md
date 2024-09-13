@@ -43,7 +43,7 @@ React is a JavaScript library. It allows the development of user interfaces usin
 ## Project Deliverables:
 - Weekly Activity Reports
 - Team Status Report
-- Project Plan
+- [Project Plan](https://github.com/IndY-01-81u3-800k-d47in6-4pp/book-dating-app/blob/44a493100a443ad3a617397ddafabd932bd11ac6/Project-Plan.md)
 - SRS, SDD, STP & Dev Doc
 - Present Prototype for Peer Review
 - Final Report Package
