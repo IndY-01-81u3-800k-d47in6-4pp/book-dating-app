@@ -47,3 +47,16 @@ http://www.bookdating.com
 
 ## Collaboration and Communication Plan
 Meetings will take place weekly. Saturday starting at noon and continuing until 2 pm will be a required meeting time. Scheduled meetings will take place over Discord. Team members are also expected to respond to Discord messages and text messages within 24 hours.
+
+## Project Schedule and Task Planning
+![Screenshot 2024-09-13 171125](https://github.com/user-attachments/assets/346feaca-ed36-4c0d-a394-694e20abb23d)
+
+## Version Control
+The project will use GitHub for version control. All team members will collaborate through GitHub to ensure proper version management and synchronization of code changes. Key practices include:
+- Branching: Each developer will work on separate branches for different features or tasks.
+- Commit and Push: Developers will commit and push their changes regularly to keep the repository updated.
+- Pull Requests and Code Reviews: Changes will be merged into the main branch after code reviews through pull requests.
+- Conflict Resolution: Any merge conflicts will be manually resolved before merging.
+- Tagging: Significant milestones, such as prototypes or final releases, will be tagged in the repository for version tracking.
+
+This structure ensures the project is well-organized and allows for efficient collaboration and version control.
