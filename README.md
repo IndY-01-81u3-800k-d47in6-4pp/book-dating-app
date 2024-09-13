@@ -45,7 +45,8 @@ React is a JavaScript library. It allows the development of user interfaces usin
 - Team Status Report
 - [Project Plan](Project-Plan.md)
 - [Software Requirements](Requirements.md)
-- SDD, STP & Dev Doc
+- [Software Design](Design.md)
+- STP & Dev Doc
 - Present Prototype for Peer Review
 - Final Report Package
 - Final Report
