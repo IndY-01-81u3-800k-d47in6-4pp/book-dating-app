@@ -265,7 +265,6 @@ CSS: Cascading Style Sheets, a language for styling HTML elements.
 HTML: HyperText Markup Language, a language for constructing the basic elements of web pages.
 
 ## Bibliography
-A list of referenced and/or related publications.
-Optimistic Locking with Version Number - Amazon Dynamodb. Amazon Web Service. (n.d.). https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBMapper.OptimisticLocking.html 
-Don’t Make Me Think, Revisited | Krug, Steve
-https://www.geeksforgeeks.org/stateful-vs-stateless-architecture/
+A list of referenced and/or related publications:
+- Optimistic Locking with Version Number - Amazon Dynamodb. Amazon Web Service. (n.d.). https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBMapper.OptimisticLocking.html 
+- Don’t Make Me Think, Revisited | Krug, Steve https://www.geeksforgeeks.org/stateful-vs-stateless-architecture/
