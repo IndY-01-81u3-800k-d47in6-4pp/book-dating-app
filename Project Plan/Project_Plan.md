@@ -60,3 +60,4 @@ The project will use GitHub for version control. All team members will collabora
 - Tagging: Significant milestones, such as prototypes or final releases, will be tagged in the repository for version tracking.
 
 This structure ensures the project is well-organized and allows for efficient collaboration and version control.
+
