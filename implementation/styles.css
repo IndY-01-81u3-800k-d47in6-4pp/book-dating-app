@@ -9,6 +9,9 @@ body {
     flex-direction: column;
     height: 100vh;
 }
+#profile {
+    background-image: url(../img/profile-bg.png);
+}
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -17,6 +20,17 @@ body {
     margin: 0;
     padding: 0 42px;
     height: 74px;
+}
+.navbar a {
+    display: flex;
+    align-items: center;
+}
+.navbar input {
+    background-color: #2C2C2C;
+    border: none;
+    border-radius: 12px;
+    padding: 8px 4px;
+    width: 300px;
 }
 .navbar-left {
     display: flex;
@@ -126,6 +140,7 @@ button {
     display: flex;
     gap: 10px;
     align-items: center;
+    margin: 0 10px;
 }
 .candidate-description-text {
     flex-basis: 650px;
@@ -146,4 +161,23 @@ button {
 }
 .candidate-accept {
     background-color: #F95F62;
+}
+
+.profile-picture {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+}
+.user-profile a {
+    display: flex;
+    gap: 8px;
+    text-decoration: none;
+}
+.username-text {
+    color: white;
+}
+.search-button {
+    width: 34px;
+    height: 34px;
+    background-color: transparent;
 }
