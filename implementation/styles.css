@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 body {
     margin: 0;
@@ -106,4 +107,43 @@ button {
     height: 36px;
     border: 1px solid white;
     border-radius: 32px;
+}
+
+.candidate {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(13, 13, 13, 0.7);
+    border-radius: 20px;
+    flex-basis: 825px;
+    flex-shrink: 1;
+}
+.candidate p {
+    color: white;
+}
+.candidate-bottom {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.candidate-description-text {
+    flex-basis: 650px;
+    font-size: 26px;
+    background-color: #2C2C2C;
+    text-align: center;
+    border-radius: 20px;
+}
+.book-title-text {
+    font-size: 48px;
+}
+.candidate-bottom img {
+    width: 64px;
+    height: 64px;
+}
+.candidate-reject {
+    background-color: #77D353;
+}
+.candidate-accept {
+    background-color: #F95F62;
 }
