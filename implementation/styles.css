@@ -25,7 +25,7 @@ body {
     display: flex;
     align-items: center;
 }
-.navbar input {
+.navbar .searchbar {
     background-color: #2C2C2C;
     border: none;
     border-radius: 12px;
@@ -168,16 +168,137 @@ button {
     height: 54px;
     border-radius: 50%;
 }
-.user-profile a {
+.navbar .user-profile a {
     display: flex;
     gap: 8px;
     text-decoration: none;
 }
-.username-text {
-    color: white;
+.username-text, .biography-label-text {
+    color: #DAE5F3;
+    font-size: 18px;
 }
 .search-button {
     width: 34px;
     height: 34px;
     background-color: transparent;
+}
+
+.main-profile-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 72px;
+    flex: 1;
+}
+.profile-info {
+    display: flex;
+    background-color: rgba(13, 13, 13, 0.7);
+    flex-basis: 350px;
+    border-radius: 36px;
+}
+.nested-profile-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2C2C2C;
+    margin: 20px;
+    padding: 20px; 
+    flex: 1;
+    border-radius: 16px;
+}
+.nested-profile-info p {
+    margin: 0;
+}
+.user-profile {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    gap: 10px;
+}
+.biography {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-color: #DAE5F3;
+    border-width: 5px 0;
+    border-style: solid;
+    padding: 10px 0;
+    gap: 10px;
+}
+.biography-text {
+    font-size: 18px;
+    color: #8190A5;
+    line-height: 28px;
+    margin: 0;
+}
+.nested-profile-info button {
+    height: 35px;
+    padding: 0;
+    font-size: 16px;
+    border-radius: 4px;
+    width: 144px;
+    background-color: #47525E;
+    color: white;
+}
+.nested-profile-info .logout-button {
+    background-color: #F95F62;
+    width: 180px;
+}
+
+.library-window {
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    flex-basis: 900px;
+    background-color: #2C2C2C;
+    padding: 30px;
+    gap: 18px;
+    border-radius: 36px;
+    flex: 1;
+}
+.library-window-text {
+    color: white;
+    font-size: 36px;
+    margin: 0;
+}
+.tags-select {
+    display: flex;
+    align-items: center;
+    height: 64px;
+    gap: 48px;
+    background-color: #656462;
+    overflow-x: scroll;
+    padding: 0 20px;
+    border-radius: 12px;
+}
+#profile .tag {
+    background-color: #47525E;
+    color: white;
+    min-width: 108px;
+}
+#profile .tag:nth-child(odd) {
+    background-color: #FFB446;
+}
+.library-books {
+    display: flex;
+    background-color: #656462;
+    flex: 1;
+    border-radius: 16px;
+    padding: 20px;
+}
+.library-books .book-title-text {
+    font-size: 20px;
+    color: white;
+}
+.book {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+    height: 225px;
+}
+.book img { /*placeholder until book cover images can be added */
+    min-width: 108px;
+    min-height: 170px;
+    background-color: #C0CCDA;
 }
