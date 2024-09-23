@@ -64,12 +64,13 @@ button {
     justify-content: space-between;
     padding: 0 48px;
     flex-grow: 1;
+    gap: 64px;
 }
 .searchbar-and-info {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 30px 64px;
+    margin: 30px 0;
     flex-basis: 300px;
 }
 .book-search input {
@@ -83,14 +84,16 @@ button {
     flex-direction: column;
     align-items: stretch;
     padding: 56px 32px;
-    justify-content: space-between;
+    justify-content: stretch;
     background-color: rgba(13, 13, 13, 0.7);
     flex: 1;
     border-radius: 36px;
+    gap: 10px;
 }
 .tags-container, .date-of-publication, .page-count-chapter {
     border-radius: 16px;
     background-color: #2C2C2C;
+    flex: 1;
 }
 .book-information p {
     color: white;
@@ -130,8 +133,7 @@ button {
     align-items: center;
     background-color: rgba(13, 13, 13, 0.7);
     border-radius: 20px;
-    flex-basis: 825px;
-    flex-shrink: 1;
+    flex: 1;
 }
 .candidate p {
     color: white;
@@ -139,6 +141,7 @@ button {
 .candidate-bottom {
     display: flex;
     gap: 10px;
+    justify-content: center;
     align-items: center;
     margin: 0 10px;
 }
@@ -188,6 +191,7 @@ button {
     justify-content: space-between;
     padding: 24px 72px;
     flex: 1;
+    gap: 64px;
 }
 .profile-info {
     display: flex;
@@ -203,6 +207,7 @@ button {
     background-color: #2C2C2C;
     margin: 20px;
     padding: 20px; 
+    gap: 24px;
     flex: 1;
     border-radius: 16px;
 }
@@ -224,6 +229,7 @@ button {
     border-style: solid;
     padding: 10px 0;
     gap: 10px;
+    flex: 1;
 }
 .biography-text {
     font-size: 18px;
@@ -240,6 +246,12 @@ button {
     background-color: #47525E;
     color: white;
 }
+.profile-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
 .nested-profile-info .logout-button {
     background-color: #F95F62;
     width: 180px;
@@ -248,13 +260,13 @@ button {
 .library-window {
     display: flex;
     flex-direction: column;
-    max-width: 900px;
-    flex-basis: 900px;
     background-color: #2C2C2C;
     padding: 30px;
     gap: 18px;
     border-radius: 36px;
     flex: 1;
+    min-width: 0;
+    overflow-x: hidden;
 }
 .library-window-text {
     color: white;
