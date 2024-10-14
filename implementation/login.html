@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+        #loginlogo {
+            margin-top: 80px;
+            margin-left: 70px;
+        }
+
+        #llogin {
+            margin-top: 10px;
+            margin-left: 55px;
+        }
+
+        #lusername {
+            margin-left: 25px;
+            height: 40px;
+        }
+
+        #lpassword {
+            margin-top: 10px;
+            margin-left: 25px;
+            height: 40px;
+        }
+
+        #lloginbutton {
+            margin-top: 10px;
+            margin-left: 30px;
+        }
+
+        #lcreatebutton {
+            margin-top: 10px;
+            margin-left: 30px;
+        }
+
+        #caleft {
+            float: left;
+        }
+
+        #lright {
+            float: right;
+            width: 65%;
+            margin-top: 40px;
+        }
+
+        #loginlogobig {
+            width: 300px;
+            border-radius: 12px;
+            margin-left: 110px;
+        }
+
+        #lbody {
+            background-image: url("../img/Wooden shelf Marvel.jpg");
+            height: 800px;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: 270px;
+            background-size: 1400px 800px;
+        }
+    </style>
+</head>
+<body>
+    <div id="lbody">
+        <div id="lright">
+            <p id="ltagline" style="color:azure; font-size: 50px;">Find The Books You Love</p>
+            <img id="loginlogobig" src="../img/Shelfmate_Logo_Enlarged.jpg" alt="logo for book dating app" href="#">
+        </div>
+        <div id="lleft">
+            <img id="loginlogo" class="logo" src="../img/Shelfmate_Logo_Enlarged.jpg" alt="logo for book dating app" href="#">
+            <h2 id="llogin" style="color:azure; font-size: 40px;">Login</h2>
+            <input id="lusername"  type="text" placeholder="Username or email"> <br> <br>
+            <input id="lpassword" type="text" placeholder="Password"> <br> <br>
+            <button id="lloginbutton" class="login-button">Login</button> <br> <br>
+            <button id="lcreatebutton" class="login-button">Create Account</button>
+        </div>
+    </div>
+</body>
+</html>
+
+<router-outlet />
