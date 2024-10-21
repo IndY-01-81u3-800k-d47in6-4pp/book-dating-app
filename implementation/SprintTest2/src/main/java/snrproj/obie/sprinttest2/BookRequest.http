@@ -1,0 +1,15 @@
+### Create a new book
+POST http://localhost:8080/books
+Content-Type: application/json
+
+{
+  "title": "The Great Gatsby",
+  "author": "F. Scott Fitzgerald",
+  "pages": 180
+}
+
+### Get all books
+GET http://localhost:8080/books
+
+### Delete a book
+DELETE http://localhost:8080/books/{id}
