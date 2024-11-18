@@ -1,0 +1,42 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.3.5'
+    id 'io.spring.dependency-management' version '1.1.6'
+}
+
+group = 'indy01.bookdatingapp'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web' // For Web
+    implementation 'org.springframework.boot:spring-boot-starter-data-mongodb' // For MongoDB
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf' // For the front-end
+    implementation 'org.springframework.boot:spring-boot-starter-webflux' // For using WebClient
+    testImplementation 'org.springframework.boot:spring-boot-starter-test' //For Testing
+    implementation 'io.github.cdimascio:dotenv-java:3.0.0'
+
+    // Add validation dependencies
+    implementation 'org.springframework.boot:spring-boot-starter-validation' // Spring Boot Validation
+    implementation 'org.hibernate.validator:hibernate-validator:6.2.0.Final' // Hibernate Validator
+    implementation 'javax.validation:validation-api:2.0.1.Final' // Validation API
+
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+
+    implementation 'javax.servlet:javax.servlet-api:4.0.1'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}

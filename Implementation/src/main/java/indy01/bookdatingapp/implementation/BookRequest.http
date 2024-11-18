@@ -1,0 +1,16 @@
+### Create a new book
+POST http://localhost:8080/books
+Content-Type: application/json
+
+
+### Get all books
+# @no-cookie-jar
+GET http://localhost:8080/books
+Authorization: Basic ZXplb2JpZWJ1YmU2OkFkbWluT2JpZQ==
+
+### Get all books from Google
+GET http://localhost:8080/books/search?query=python
+Authorization: Basic ZXp6b2JpZWJ1YmU2OkFkbWluT2JpZQ==
+
+### Delete a book
+DELETE http://localhost:8080/books/{id}

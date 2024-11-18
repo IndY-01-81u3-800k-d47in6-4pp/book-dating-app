@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+    <meta name="_csrf" th:content="${_csrf.token}" />
+</head>
+<body>
+<div class="container">
+    <!-- Hidden input for userId -->
+    <input type="hidden" name="userId" th:value="${session.userId}">
+
+    <!-- Hidden input for bookId -->
+    <input type="hidden" name="bookId" th:value="${book.id}">
+
+    <!-- Left Side (40%) -->
+    <div class="left-side">
+        <!-- Profile Section -->
+        <div class="profile">
+            <a th:href="@{/profile(userId=${session.userId})}">
+                <img th:src="@{/img/Default Profile Pic.png}" alt="Profile Picture">
+            </a>
+            <span>User Name</span>
+        </div>
+
+        <!-- Filter Section -->
+        <div class="filter">
+            <button class="filter-button">
+                <img th:src="@{/img/Filter Black.png}" alt="Filter Icon">
+                <span>Filter</span>
+            </button>
+        </div>
+
+        <!-- Recent Books Title -->
+        <div class="recent-books-title">
+            <span>Recent Books</span>
+        </div>
+
+        <!-- Recent Books Carousel -->
+        <div class="book-carousel">
+            <span class="nav-arrow" id="prev-arrow">&#9664;</span>
+            <div class="book-cards-container">
+                <div class="book-cards"></div>
+            </div>
+            <span class="nav-arrow" id="next-arrow">&#9654;</span>
+        </div>
+
+        <!-- Trending Books Title -->
+        <div class="trending-books-title">
+            <span>Trending Books</span>
+        </div>
+
+        <!-- Trending Books Carousel -->
+        <div class="book-cards-container">
+            <span class="nav-arrow">&#9664;</span> <!-- Left Arrow -->
+            <div class="book-cards">Image Here</div>
+            <div class="book-cards">Image Here</div>
+            <div class="book-cards">Image Here</div>
+            <span class="nav-arrow">&#9654;</span> <!-- Right Arrow -->
+        </div>
+    </div>
+
+    <!-- Right Side (60%) -->
+    <div class="right-side">
+        <!-- Header with Icon and Text -->
+        <div class="header-icon">
+            <img th:src="@{/img/Shelfmate_Circle.png}" alt="Shelfmate Icon">
+            <span>Shelfmate</span>
+        </div>
+
+        <!-- Book Detail Card -->
+        <div class="book-detail-card">
+            <!-- Book Image -->
+            <div class="book-image"><img th:src="${book.thumbnailUrl}" alt="Book Cover"></div>
+            <!-- Book Information -->
+            <div class="book-info">
+                <div class="info-section">
+                    <h4>Title</h4>
+                    <span class="title" th:text="${book.title}"></span>
+                </div>
+                <div class="info-section">
+                    <h4>Author</h4>
+                    <span class="author" th:text="${book.author}"></span>
+                </div>
+                <div class="info-section">
+                    <h4>Genre</h4>
+                    <span>Historical Fiction, Drama, Medieval</span>
+                </div>
+                <div class="info-section">
+                    <h4>Description</h4>
+                    <span class="description" th:text="${book.description}">
+                        <button class="read-more" onclick="showModal()">...</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div id="description-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button" onclick="closeModal()">&times;</span>
+                <h4>Description</h4>
+                <p th:text="${book.description}"></p>
+            </div>
+        </div>
+
+        <!-- Buttons Below Book Detail Card -->
+        <div class="book-buttons">
+            <img th:src="@{/img/Thumbs Up.png}" alt="Reject Button" onclick="fetchNextBook('reject')">
+            <img th:src="@{/img/Library Icon.png}" alt="Button 2">
+            <img th:src="@{/img/Thumbs Up.png}" alt="Accept Button" onclick="fetchNextBook('accept')">
+        </div>
+    </div>
+</div>
+<script th:src="@{/js/engine.js}"></script>
+</body>
+</html>

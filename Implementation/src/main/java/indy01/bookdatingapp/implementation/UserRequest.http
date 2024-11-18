@@ -1,0 +1,18 @@
+### Create a new user
+POST http://localhost:8080/users/register
+Content-Type: application/json
+
+{
+  "username": "testuser02",
+  "password": "password123",
+  "email": "testuser02@example.com"
+}
+
+### Get all users
+# @no-cookie-jar
+GET http://localhost:8080/users
+Authorization: Basic ZXplb2JpZWJ1YmU2OkFkbWluT2JpZQ==
+
+
+### Delete a user
+DELETE http://localhost:8080/books/{id}
