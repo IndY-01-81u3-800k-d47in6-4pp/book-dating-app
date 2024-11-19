@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Background Image Styling */
+body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    color: #000;
+    margin: 0;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url("../img/Wooden shelf Marvel.jpg") no-repeat center center fixed;
+    background-size: cover;
+    z-index: -1;
+    pointer-events: none; /* Prevent interaction with the background */
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #444;
+}
+
+.book-list {
+    list-style: none;
+}
+
+.book-list li {
+    padding: 10px 15px;
+    font-size: 1.2em;
+    color: #444;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    margin: 10px 0;
+    transition: background-color 0.3s ease;
+}
+
+.book-list li:hover {
+    background-color: #c5c5c5;
+}

@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Background Image Styling */
+body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    color: #000;
+    margin: 0;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url("../img/Wooden shelf Marvel.jpg") no-repeat center center fixed;
+    background-size: cover;
+    z-index: -1;
+    pointer-events: none; /* Prevent interaction with the background */
+}
+.page-container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-y: hidden;
+}
+.book-overview{
+    flex: 1; /* Take up the remaining space below the navbar */
+    display: flex;
+    flex-direction: column;
+    max-width: 100vw;
+    overflow-y: auto;
+}
+.row {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+}
+.col {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    max-height: 100%;
+    overflow-y: auto;
+}
+.book-information {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 56px 32px;
+    justify-content: stretch;
+    background-color: rgba(13, 13, 13, 0.7);
+    flex: 1;
+    border-radius: 36px;
+    gap: 10px;
+}
+.info-container {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 0;
+    border-radius: 16px;
+    background-color: #2C2C2C;
+    flex: 1;
+    width: 100%;
+    scroll-bar-width: none;
+    -ms-overflow-style: none;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: calc(100vh - 180px); /* Controls the maximum height */
+    min-height: 100%;
+    min-width: 165px;
+}
+.info-container > div {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto; /* Enable scroll if content overflows */
+    scrollbar-width: thin; /* Optional: for thin scrollbars on Firefox */
+}
+.info-container > div:not(:last-child) {
+    border-bottom: 1px dotted #ccc;
+}
+.info-container > div::-webkit-scrollbar {
+    width: 5px;
+}
+.info-container > div::-webkit-scrollbar-thumb {
+    background-color: #2C2C2C;
+    border-radius: 5px;
+}
+.book-candidate {
+    order: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(13, 13, 13, 0.7);
+    background-image: url("../img/Echoes of Steel V1 with Title, Action.png");
+    background-size: cover; /* Scales the image to fit within both width and height */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the image within the container */
+    border-radius: 20px;
+    width: 100%;
+    min-width: 300px; /* Sets a minimum width if desired */
+}
+.book-summary {
+    order: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(13, 13, 13, 0.7);
+    border-radius: 20px;
+    flex: 1;
+    overflow-y: auto;
+}
+/*
+.tags-container, .date-of-publication, .page-count-chapter {
+    border-radius: 16px;
+    background-color: #2C2C2C;
+    flex: 1;
+}
+ */
+.book-information p {
+    color: white;
+    text-align: center;
+}
+.info-text {
+    font-size: 26px;
+}
+.tag-text {
+    font-size: 18px;
+    margin: 0;
+}
+.tags-container {
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    gap: 10px 0;
+    height: 196px;
+}
+.tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2C2C2C;
+    border-width: 1px;
+    width: 108px;
+    height: 36px;
+    border: 1px solid white;
+    border-radius: 32px;
+}
+
+.candidate-bottom {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    margin: 0 10px;
+    margin-top: auto;
+}
+.candidate-description-text {
+    flex-grow: 1;
+    max-width: 650px;
+    font-size: 48px;
+    background-color: #2C2C2C;
+    text-align: center;
+    border-radius: 20px;
+    color: white;
+    margin: auto 10px 0;
+}
+.book-title-text {
+    font-size: 48px;
+}
+.book-candidate img {
+    margin-top: auto;
+    width: 64px;
+    height: 64px;
+}
+.candidate-reject {
+    margin-right: auto;
+}
+.candidate-accept {
+    margin-left: auto;
+}
+.summary-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 0;
+    border-radius: 16px;
+    background-color: #2C2C2C;
+    flex: 1;
+    width: 100%;
+    flex-direction: column;
+    scroll-bar-width: none;
+    -ms-overflow-style: none;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: calc(100vh - 180px); /* Controls the maximum height */
+    min-height: 100%;
+    min-width: 165px;
+}
+.summary-container::-webkit-scrollbar {
+    display: none;
+}
+.summary-container p {
+    display: flex;
+    flex: 0 1 auto; /* Allows the text to shrink if necessary */
+    min-width: 0; /* Enables shrinking within container */
+    white-space: normal; /* Allows wrapping */
+    word-break: break-word; /* Ensures long words break within container */
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-bar-width: none;
+    -ms-overflow-style: none;
+    text-overflow: ellipsis;
+    color: white;
+    text-align: center;
+    font-size: clamp(16px, 2vw, 26px); /* Responsive font size */
+    margin: 0;
+    padding: 10px;
+}
+.summary-container p::-webkit-scrollbar {
+    display: none;
+}
+@media (max-width: 768px) {
+    .page-container{
+        display: flex;
+        flex-direction: column;
+        height: 100%; !important;
+        overflow-y: auto;
+    }
+    .book-overview{
+        flex: 1; /* Take up the remaining space below the navbar */
+        display: flex;
+        flex-direction: column;
+        max-width: 100vw;
+        overflow-y: auto !important;
+    }
+    .row {
+        flex-direction: column;
+        flex: 1;
+        overflow-y: auto;
+    }
+    .book-information { order: 3; margin: 20px 0 !important;}
+    .book-candidate { order: 1; margin: 20px 0 !important; max-height: 100% !important; max-width: 768px !important;}
+    .book-summary { order: 2; margin: 20px 0 !important;}
+}

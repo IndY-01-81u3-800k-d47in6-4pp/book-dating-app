@@ -1,0 +1,313 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main layout split for desktop */
+.container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Left side (40%) */
+.left-side {
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.profile,
+.filter,
+.recent-books-title,
+.trending-books-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+/* Filter Button */
+.filter-button {
+    width: 62px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px; /* Space between the icon and text */
+    background-color: white;
+    border: 1px solid white; /* Optional: Add a border */
+    border-radius: 9px; /* Half the height for rounded corners */
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    padding: 0; /* Remove extra padding */
+}
+
+/* Style the filter image inside the button */
+.filter-button img {
+    width: 17px; /* Adjust size as needed */
+    height: 18px;
+}
+
+/* Hover effect for the button */
+.filter-button:hover {
+    background-color: #f0f0f0; /* Light gray background on hover */
+}
+
+/* Optional: Active effect for the button */
+.filter-button:active {
+    background-color: #e0e0e0; /* Slightly darker gray on active */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+.book-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    position: relative;
+}
+
+.nav-arrow {
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.book-cards-container {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%; /* Full width of the parent */
+    height: 200px; /* Consistent height */
+    justify-content: center; /* Center the carousel horizontally */
+    align-items: center; /* Align items vertically */
+}
+
+.book-cards {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: fit-content; /* Adjust to content dynamically */
+}
+
+.book-card {
+    flex: 0 0 auto; /* Adjust each card to match the container width */
+    text-align: center;
+    position: relative;
+    transform: scale(0.9);
+    opacity: 0.5;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.book-card.active {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.book-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Book Card Container for Horizontal Scroll V1
+.book-cards-container {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.book-cards {
+    width: 100px;
+    height: 150px;
+    background-color: #f3f3f3;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -40px;
+}
+
+.nav-arrow {
+    font-size: 24px;
+    cursor: pointer;
+}
+*/
+/* Right side (60%) */
+.right-side {
+    background-color: #111D29;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.header-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #CBBBA5;
+}
+
+.header-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.book-detail-card {
+    width: 374px;
+    height: 338px;
+    background-color: #EDE0CD;
+    text-decoration-color: #21374E;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+}
+
+.book-image {
+    width: 50%;
+    background-color: #f3f3f3;
+}
+
+.book-image img{
+    width: 100%;
+    height: 100%;
+}
+.book-info {
+    width: 50%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.book-info .info-section {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    color: #333;
+}
+
+.book-info .info-section h4 {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.book-info > div:not(:last-child) {
+    padding-bottom: 3px;
+    border-bottom: 3px dotted black;
+}
+
+/* Description Styling */
+.description {
+    display: -webkit-box;
+    -webkit-line-clamp: 10; /* Display up to 10 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    position: relative;
+}
+
+.read-more {
+    background: none;
+    border: none;
+    color: blue;
+    font-size: 12px;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 5px;
+}
+
+/* Modal Styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    width: 400px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.modal-content {
+    padding: 20px;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: red;
+}
+
+/* Modal background overlay */
+.modal::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+
+.book-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.book-buttons img {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 50px;
+    padding: 10px;
+}
+
+.book-buttons img:first-child {
+    transform: rotate(180deg); /* Rotate the first image 180 degrees */
+}
+
+/* Responsive layout for smaller screens */
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    .left-side {
+        display: none;
+    }
+}
