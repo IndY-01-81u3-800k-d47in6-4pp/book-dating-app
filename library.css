@@ -80,15 +80,21 @@ body {
     display: flex;
     flex-direction: column;
     gap: 36px;
+    overflow-y: auto;
 }
 .shelf {
     height: 84px;
     background-color: #F1F1F1;
     display: flex;
     align-items: center;
+    border: none;
     border-radius: 10px;
+    font-size: 30px;
 }
 .shelf:hover {
+    background-color: #C9C9C9;
+}
+.shelf.active {
     background-color: #C9C9C9;
 }
 .shelf img {
@@ -142,8 +148,8 @@ body {
 }
 .checkbox {
     position: absolute;
-    right: 10px; /* Adjust as needed */
-    transform: scale(1.5); /* Optional: enlarge checkbox for better visibility */
+    right: 10px;
+    transform: scale(1.5);
 }
 .shelf-edit {
     height: 60px;
