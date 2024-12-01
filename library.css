@@ -2,7 +2,9 @@ body {
     margin: 0;
     height: 100vh;
     display:flex;
-    flex-direction: column
+    flex-direction: column;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
 }
 .top-bar {
     background-color: #D6C6B0;
@@ -42,12 +44,133 @@ body {
     background-color: #FFFFFF;
     padding: 25px;
     width: 30%;
+    gap: 40px;
+    font-size: 30px;
 }
 .shelf-plus {
     width: 42px;
     height: auto;
 }
+.pfp-settings {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 6px solid #21374E;
+}
+.pfp-name {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.pfp-settings .settings {
+    width: 45px;
+    height: 45px;
+}
+.pfp-settings .pfp {
+    background-color: #E5E9F2;
+    border-radius: 100%;
+    width: 72px;
+    height: auto;
+}
+.pfp-name p {
+    margin: 0;
+}
+.shelf-select {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+.shelf {
+    height: 84px;
+    background-color: #F1F1F1;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+.shelf:hover {
+    background-color: #C9C9C9;
+}
+.shelf img {
+    width: 64px;
+    height: 56px;
+    margin-right: 24px;
+}
+.add-shelf {
+    background-color: #F1F1F1;
+    border: none;
+    border-radius: 100px;
+    margin: 0 70px;
+}
+.add-shelf:hover {
+    background-color: #C9C9C9;
+}
 .right-side {
     background-color: #111D29;
     width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+.books-container {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(172px, 1fr));
+    grid-template-rows: auto 1fr;
+    gap: 24px;
+    overflow-y: auto;
+    padding-left: 24px;
+}
+.book {
+    position: relative;
+    height: 320px;
+    width: 172px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-top: 24px;
+}
+.book-cover {
+    height: 240px;
+    width: 150px;
+}
+.book-title {
+    text-align: center;
+    color: #F1F1F1;
+    font-size: 24px;
+    margin: 0;
+}
+.checkbox {
+    position: absolute;
+    right: 10px; /* Adjust as needed */
+    transform: scale(1.5); /* Optional: enlarge checkbox for better visibility */
+}
+.shelf-edit {
+    height: 60px;
+    padding: 0px 24px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    align-items: center;
+}
+.shelf-edit button {
+    background-color: #F1F1F1;
+    width: 180px;
+    height: 48px;
+    border-radius: 100px;
+    border: none;
+    display: flex;
+    font-size: 26px;
+    align-items: center;
+    gap: 12px;
+}
+.shelf-edit button:hover {
+    background-color: #C9C9C9;
+}
+.shelf-edit img {
+    width: 42px;
+    height: 42px;
+}
+.shelf-edit p {
+    margin: 0;
 }
