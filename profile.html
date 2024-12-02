@@ -38,18 +38,26 @@
         </div>
         
         <div class="right-side">
-            <div class="books-container">
-                <div class="book">
-                    <input type="checkbox" class="checkbox">
-                    <img class="book-cover" src="img/pillar.jpg">
-                    <p class="book-title">The Pillars of the Earth</p>
-                </div>
-            </div>
+            <div class="books-container"></div>
             <div class="shelf-edit">
-                <button class="move-book">
-                    <img src="img/move_icon.png">
-                    <p>Move</p>
-                </button>
+                <div class="move-book">
+                    <div class="move-dialog">
+                        <p class="move-dialog-text">Shelves</p>
+                        <div class="move-shelves-container">
+                            <div class="shelf-to-move">
+                                <p>Shelf Name</p>
+                                <input type="checkbox" class="checkbox">
+                            </div>
+                        </div>
+                        <button class="confirm-move">
+                            <img src="img/checkmark.png">
+                        </button>
+                    </div>
+                    <button class="move-book-btn">
+                        <img src="img/move_icon.png">
+                        <p>Move</p>
+                    </button>
+                </div>
                 <button class="delete-book">
                     <img src="img/trash_can.png">
                     <p>Delete</p>
