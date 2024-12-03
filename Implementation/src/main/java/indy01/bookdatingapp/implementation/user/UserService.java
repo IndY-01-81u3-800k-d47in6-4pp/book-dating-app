@@ -59,11 +59,31 @@ public class UserService {
     public void addBookToUserLibrary(String userId, String bookId) {
         User user = userRepository.findById(userId)
                 .orElseThrow(() -> new RuntimeException("User with ID " + userId + " not found"));
-        System.out.println("I will now attempt to add book");
         if (!user.getBooks().contains(bookId)) user.addBook(bookId);
         else {System.out.println("Book with ID: " + bookId +" Present");}
         userRepository.save(user);
     }
+
+    public void removeBookFromUserLibrary(String userId, String bookId) {
+        User user = userRepository.findById(userId)
+                .orElseThrow(() -> new RuntimeException("User with ID " + userId + " not found"));
+        if (user.getBooks().contains(bookId)) {
+            user.getBooks().remove(bookId);
+            userRepository.save(user);
+        } else {
+            System.out.println("Book with ID: " + bookId + " not found in the user's library");
+        }
+    }
+
+    public void removeBooksFromUserLibrary(String userId, List<String> bookIds) {
+        User user = userRepository.findById(userId)
+                .orElseThrow(() -> new RuntimeException("User with ID " + userId + " not found"));
+
+        // Remove all specified books from the user's library
+        user.getBooks().removeAll(bookIds);
+        userRepository.save(user); // Save the updated user
+    }
+
 
     public List<Book> getUserLibraryBooks(String userId) {
         User user = userRepository.findById(userId)

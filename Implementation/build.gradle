@@ -21,7 +21,8 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web' // For Web
     implementation 'org.springframework.boot:spring-boot-starter-data-mongodb' // For MongoDB
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf' // For the front-end
-    implementation 'org.springframework.boot:spring-boot-starter-webflux' // For using WebClient
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'// For using WebClient
     testImplementation 'org.springframework.boot:spring-boot-starter-test' //For Testing
     implementation 'io.github.cdimascio:dotenv-java:3.0.0'
 

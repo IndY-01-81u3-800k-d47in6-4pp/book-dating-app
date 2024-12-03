@@ -13,8 +13,6 @@
     <img src="/img/Shelfmate_Logo_Enlarged.jpg" class="rounded logo-img" alt="logo">
     <h2>Welcome</h2>
 
-
-
     <form th:action="@{/log-in}" method="post" th:object="${user}">
         <div class="input-field">
             <input type="text" th:field="*{username}" required placeholder="Email or Username">

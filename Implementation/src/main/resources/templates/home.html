@@ -22,7 +22,7 @@
             <a th:href="@{/profile(userId=${session.userId})}">
                 <img th:src="@{/img/Default Profile Pic.png}" alt="Profile Picture">
             </a>
-            <span>User Name</span>
+            <span th:text="${username}"></span>
         </div>
 
         <!-- Filter Section -->
@@ -42,6 +42,7 @@
         <div class="book-carousel">
             <span class="nav-arrow" id="prev-arrow">&#9664;</span>
             <div class="book-cards-container">
+
                 <div class="book-cards"></div>
             </div>
             <span class="nav-arrow" id="next-arrow">&#9654;</span>
@@ -53,13 +54,14 @@
         </div>
 
         <!-- Trending Books Carousel -->
-        <div class="book-cards-container">
-            <span class="nav-arrow">&#9664;</span> <!-- Left Arrow -->
-            <div class="book-cards">Image Here</div>
-            <div class="book-cards">Image Here</div>
-            <div class="book-cards">Image Here</div>
-            <span class="nav-arrow">&#9654;</span> <!-- Right Arrow -->
+        <div class="trending-books-carousel">
+            <span class="nav-arrow" id="trending-prev-arrow">&#9664;</span>
+            <div class="book-cards-container">
+                <div class="book-cards"></div>
+            </div>
+            <span class="nav-arrow" id="trending-next-arrow">&#9654;</span>
         </div>
+
     </div>
 
     <!-- Right Side (60%) -->
@@ -86,7 +88,7 @@
                 </div>
                 <div class="info-section">
                     <h4>Genre</h4>
-                    <span>Historical Fiction, Drama, Medieval</span>
+                    <span class="genre" th:text="${book.genres}"></span>
                 </div>
                 <div class="info-section">
                     <h4>Description</h4>

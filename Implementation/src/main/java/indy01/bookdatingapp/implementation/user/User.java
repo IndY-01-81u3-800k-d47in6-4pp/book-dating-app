@@ -20,7 +20,7 @@ public class User implements UserDetails {
     private String password;
     private String email;
 
-    private List<String> books = new ArrayList<>();;
+    private List<String> books = new ArrayList<>();
 
     // Constructors, Getters, and Setters
     public User() {}

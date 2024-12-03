@@ -9,8 +9,9 @@ GET http://localhost:8080/books
 Authorization: Basic ZXplb2JpZWJ1YmU2OkFkbWluT2JpZQ==
 
 ### Get all books from Google
-GET http://localhost:8080/books/search?query=python
-Authorization: Basic ZXp6b2JpZWJ1YmU2OkFkbWluT2JpZQ==
+# @no-cookie-jar
+GET http://localhost:8080/books/search?query=java
+Authorization: Basic ZXplb2JpZWJ1YmU2OkFkbWluT2JpZQ==
 
 ### Delete a book
 DELETE http://localhost:8080/books/{id}

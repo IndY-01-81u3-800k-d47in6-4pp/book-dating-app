@@ -46,17 +46,44 @@ public class BookService {
     private Book convertToBook(BookResponse.Item item) {
         BookResponse.VolumeInfo volumeInfo = item.getVolumeInfo();
         Book book = new Book();
-        book.setTitle(volumeInfo.getTitle());
-        book.setAuthor(volumeInfo.getAuthors().isEmpty() ? "Unknown" : String.join(", ", volumeInfo.getAuthors()));
-        book.setPages(volumeInfo.getPageCount());
-        book.setDescription(volumeInfo.getDescription() != null ? volumeInfo.getDescription() : "No description available");
 
+        // Set title
+        book.setTitle(volumeInfo.getTitle());
+
+        // Handle authors (null or empty case)
+        book.setAuthor(
+                volumeInfo.getAuthors() != null && !volumeInfo.getAuthors().isEmpty()
+                        ? String.join(", ", volumeInfo.getAuthors())
+                        : "Unknown"
+        );
+
+        // Set pages
+        book.setPages(volumeInfo.getPageCount());
+
+        // Handle description (null case)
+        book.setDescription(
+                volumeInfo.getDescription() != null
+                        ? volumeInfo.getDescription()
+                        : "No description available"
+        );
+
+        // Handle genres (null or empty case)
+        book.setGenres(
+                volumeInfo.getCategories() != null && !volumeInfo.getCategories().isEmpty()
+                        ? volumeInfo.getCategories()
+                        : Collections.singletonList("Unknown")
+        );
+
+        // Handle thumbnail URL (null case)
         if (volumeInfo.getImageLinks() != null) {
             book.setThumbnailUrl(volumeInfo.getImageLinks().getThumbnail());
+        } else {
+            book.setThumbnailUrl(null);
         }
 
         return book;
     }
+
 
     public List<Book> getAllBooks() {
         return bookRepository.findAll();

@@ -80,7 +80,13 @@
     gap: 10px;
     position: relative;
 }
-
+.trending-books-carousel{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    position: relative;
+}
 .nav-arrow {
     font-size: 24px;
     cursor: pointer;

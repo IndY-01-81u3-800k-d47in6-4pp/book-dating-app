@@ -32,6 +32,7 @@ public class BookResponse {
         private int pageCount;
         private String description;
         private ImageLinks imageLinks;
+        private List<String> categories;
 
         public String getTitle() {
             return title;
@@ -72,6 +73,15 @@ public class BookResponse {
         public void setImageLinks(ImageLinks imageLinks) {
             this.imageLinks = imageLinks;
         }
+
+        public List<String> getCategories() {
+            return categories;
+        }
+
+        public void setCategories(List<String> categories) {
+            this.categories = categories;
+        }
+
     }
 
     public static class ImageLinks {

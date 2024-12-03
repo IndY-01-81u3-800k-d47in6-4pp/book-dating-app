@@ -3,6 +3,9 @@ package indy01.bookdatingapp.implementation.book;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Document(collection = "books")
 public class Book {
 
@@ -13,6 +16,7 @@ public class Book {
     private int pages;
     private String description;
     private String thumbnailUrl;
+    private List<String> genres = new ArrayList<>();
 
     // Getters and Setters
     public String getId() {
@@ -61,5 +65,13 @@ public class Book {
 
     public void setThumbnailUrl(String thumbnailUrl) {
         this.thumbnailUrl = thumbnailUrl;
+    }
+
+    public List<String> getGenres() {
+        return genres;
+    }
+
+    public void setGenres(List<String> genres) {
+        this.genres = genres;
     }
 }

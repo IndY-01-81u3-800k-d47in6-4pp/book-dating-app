@@ -31,19 +31,11 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
 
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
-        System.out.println("CustomAuthenticationProvider called");  // Debug statement
         String identifier = authentication.getName();
         String password = authentication.getCredentials().toString();
 
-
-        //Debug
-        System.out.println("My Identifier is: " + identifier);
-
         UserDetails user = userDetailsService.loadUserByUsername(identifier);
 
-        //Debug
-        System.out.println(identifier + " " + password);
-        System.out.println(identifier + " " + user.getPassword());
 
         if (!passwordEncoder.matches(password, user.getPassword())) {
             throw new BadCredentialsException("Invalid username or password.");
@@ -55,8 +47,6 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
 
             // Store userId in the session
             session.setAttribute("userId", userId);
-
-            System.out.println("User ID set in session: " + userId); // Debug
         }
 
         // Set the authentication token in the SecurityContext
